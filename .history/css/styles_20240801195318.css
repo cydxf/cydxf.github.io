@@ -1,15 +1,45 @@
-body, html {
+/* Reset margin and padding for all elements */
+* {
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 120%;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
 }
 
 .hero {
     position: relative;
     width: 100%;
     height: 120vh; /* Viewport height */
-    background-image: url('../resource/image/1.png'); /* 首页大图  */
+    background-image: url('../resource/picture/shigiChannelArt_clean.jpg'); /* 首页大图  */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -18,7 +48,6 @@ body, html {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #fff;
 }
 
 .hero:before{
@@ -27,27 +56,14 @@ body, html {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    height: 120%;
+    background: rgba(0, 0, 0, 0);
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-}
-
-.hero h1 {
-    font-size: 3rem; /* 适当调整标题字体大小 */
-    margin: 0;
-    padding: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 添加文本阴影使其更清晰 */
-}
-
-.hero p {
-    font-size: 1.25rem; /* 适当调整副标题字体大小 */
-    margin-top: 0.5rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* 添加文本阴影使其更清晰 */
 }
 
 main {

@@ -9,7 +9,7 @@ body, html {
     position: relative;
     width: 100%;
     height: 120vh; /* Viewport height */
-    background-image: url('../resource/image/1.png'); /* 首页大图  */
+    background-image: url('../resource/picture/1.png'); /* 首页大图  */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
