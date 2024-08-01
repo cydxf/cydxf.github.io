@@ -118,7 +118,7 @@ body {
 
 .updates-section {
     width: 100%; /* Ensure it covers the full width */
-    background-color: #000; /* Change to pure black */
+    background-color: #f0f0f0; /* Light grey background */
     padding: 40px 20px; /* Padding for spacing inside the section */
     display: flex; /* Flexbox for centering content */
     flex-direction: column; /* Stack contents vertically */
@@ -126,7 +126,11 @@ body {
     align-items: center; /* Center vertically */
     margin-top: 0px; /* Ensure it sticks directly below the hero section */
     box-sizing: border-box; /* Include padding in the element's total width and height */
-    color: #fff; /* Ensure text is visible on black background */
+}
+
+.updates-content h2 {
+    font-size: 2rem; /* Title font size */
+    margin-bottom: 0px; /* Space below the title */
 }
 
 .updates-content h2 {
@@ -153,7 +157,7 @@ body {
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(58, 55, 55, 0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .post-link {

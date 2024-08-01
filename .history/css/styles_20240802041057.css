@@ -1,33 +1,28 @@
 body, html {
     margin: 0;
     padding: 0;
+    height: 100%;
     width: 100%;
-    height: 200%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure the body covers the full height of the viewport */
 }
 
 .hero {
+    position: absolute;
     width: 100%;
     height: 131.8vh; /* Viewport height */
+    left: 0;
+    top: 0;
     background-image: url('../resource/image/shigiChannelArt_clean.jpg'); /* 首页大图  */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
     display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: left;
+    justify-content: flex-start;
+    align-items: flex-start;
     text-align: left;
-    position: relative;
 }
 
-.hero:before {
+.hero:before{
     content: '';
     position: absolute;
     top: 0;
@@ -43,7 +38,6 @@ body {
     z-index: 2;
     padding: 40px;
     margin-left: 160px;
-    max-width: 800px; /* Ensure content does not stretch too wide */
 }
 
 .hero h1 {
@@ -55,7 +49,7 @@ body {
 }
 
 .hero p {
-    font-style: initial;
+    font-style:initial;
     font-size: 1.25rem; /* 适当调整副标题字体大小 */
     margin-top: 0.5rem;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* 添加文本阴影使其更清晰 */
@@ -117,21 +111,19 @@ body {
 }
 
 .updates-section {
-    width: 100%; /* Ensure it covers the full width */
-    background-color: #000; /* Change to pure black */
+    background-color: #f0f0f0; /* Light grey background */
     padding: 40px 20px; /* Padding for spacing inside the section */
-    display: flex; /* Flexbox for centering content */
-    flex-direction: column; /* Stack contents vertically */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    margin-top: 0px; /* Ensure it sticks directly below the hero section */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
-    color: #fff; /* Ensure text is visible on black background */
+}
+
+.updates-content {
+    max-width: 800px; /* Maximum width for content */
+    margin: 0 auto; /* Center the content */
+    text-align: center; /* Center text inside the section */
 }
 
 .updates-content h2 {
     font-size: 2rem; /* Title font size */
-    margin-bottom: 0; /* Space below the title */
+    margin-bottom: 20px; /* Space below the title */
 }
 
 .updates-content p {
@@ -139,43 +131,8 @@ body {
     margin: 0; /* Remove margin */
 }
 
-.posts-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: #f0f0f0; /* 背景颜色 */
-    padding: 20px;
-}
 
-.post-item {
-    width: 300px;
-    margin: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(58, 55, 55, 0);
-}
 
-.post-link {
-    text-decoration: none;
-    color: inherit;
-}
 
-.post-image {
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-}
 
-.post-title {
-    padding: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    background-color: #fff;
-}
-
-.post-link:hover .post-image {
-    opacity: 0.8;
-}
 
