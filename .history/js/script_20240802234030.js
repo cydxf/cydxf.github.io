@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const heroTop = heroSection.getBoundingClientRect().top;
 
         if (heroBottom <= 0) {
-            menuIconWrapper.classList.add('fixed');
+            menuIcon.classList.add('fixed');
         } else {
-            menuIconWrapper.classList.remove('fixed');
+            menuIcon.classList.remove('fixed');
         }
     });
 });

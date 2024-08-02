@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const heroBottom = heroSection.getBoundingClientRect().bottom;
         const heroTop = heroSection.getBoundingClientRect().top;
 
-        if (heroBottom <= 0) {
+        if (heroBottom <= window.innerHeight) {
             menuIconWrapper.classList.add('fixed');
         } else {
             menuIconWrapper.classList.remove('fixed');

@@ -277,36 +277,40 @@ video {
 }
 
 
+/* 常规样式省略，使用之前提供的样式 */
+
+/* 常规样式省略，使用之前提供的样式 */
+
+/* 常规样式省略，使用之前提供的样式 */
+
 .menu-icon {
-    top: 20px;
-    left: 20px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
     cursor: pointer;
     z-index: 1000;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     display: none; /* 默认隐藏菜单图标 */
 }
 
 .menu-icon .bar {
     width: 100%;
-    height: 2.95px;
+    height: 3px;
     background-color: #fff;
     transition: all 0.3s;
-    margin: 4px 0;
 }
-
-
 
 .side-nav {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: -250px;
+    width: 250px;
     height: 100%;
-    background-color: #001f3f; /* 深蓝色背景 */
+    background-color: #333;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -314,18 +318,17 @@ video {
     justify-content: center;
     transition: all 0.3s;
     z-index: 999;
-    transform: translateX(-100%); /* 初始隐藏在屏幕外 */
 }
 
 .side-nav .nav-link {
     color: #fff;
     text-decoration: none;
-    font-size: 1.8rem;
-    margin: 20px 0;
+    font-size: 1.5rem;
+    margin: 10px 0;
 }
 
 .side-nav.open {
-    transform: translateX(0); /* 展开时显示 */
+    left: 0;
 }
 
 .menu-icon.open .bar:nth-child(1) {
@@ -339,30 +342,6 @@ video {
 .menu-icon.open .bar:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
 }
-
-.menu-icon-wrapper {
-    position: absolute;
-    top: 15px;
-    left: 20px;
-    z-index: 1000;
-}
-
-.menu-icon-wrapper.fixed .menu-icon{
-    position: fixed;
-    background-color: #001f3f; /* 深蓝色背景 */
-    padding: 10px;
-    margin-left: -15px;
-    margin-top: -10px;
-    border-radius: 0;
-}
-
-
-/* 防止背景滚动 */
-body.no-scroll {
-    overflow: hidden;
-}
-
-
 
 /* 小屏幕调整 */
 @media (max-width: 768px) {

@@ -265,6 +265,10 @@ video {
 
 .footer-social-buttons .social-button {
     margin: 0 10px; /* 社交按钮间距 */
+    width: 30px; /* 图标的宽度 */
+    height: 30px; /* 图标的高度 */
+    font-size: 1.2rem; /* 图标的字体大小 */
+
 }
 
 .footer-bottom {

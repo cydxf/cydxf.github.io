@@ -97,6 +97,9 @@ body {
     display: flex;
     gap: 20px; /* Space between social buttons */
     margin-top: 80px; /* Add spacing above social buttons */
+    width: 30px; /* 图标的宽度 */
+    height: 30px; /* 图标的高度 */
+    font-size: 1.5rem; /* 图标的字体大小 */
 }
 
 .social-button {

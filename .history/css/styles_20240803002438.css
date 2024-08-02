@@ -96,7 +96,7 @@ body {
 .social-buttons {
     display: flex;
     gap: 20px; /* Space between social buttons */
-    margin-top: 80px; /* Add spacing above social buttons */
+    margin-top: 60px; /* Add spacing above social buttons */
 }
 
 .social-button {

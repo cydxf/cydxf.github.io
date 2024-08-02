@@ -11,13 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('scroll', () => {
-        const heroBottom = heroSection.getBoundingClientRect().bottom;
-        const heroTop = heroSection.getBoundingClientRect().top;
+        const heroRect = heroSection.getBoundingClientRect();
+        const isHeroInView = heroRect.top <= 0 && heroRect.bottom >= 0;
 
-        if (heroBottom <= 0) {
-            menuIconWrapper.classList.add('fixed');
-        } else {
+        if (isHeroInView) {
             menuIconWrapper.classList.remove('fixed');
+            menuIconWrapper.style.top = `${heroRect.top + window.scrollY + 20}px`;
+            menuIconWrapper.style.left = `${heroRect.left + window.scrollX + 20}px`;
+        } else {
+            menuIconWrapper.classList.add('fixed');
         }
     });
 });

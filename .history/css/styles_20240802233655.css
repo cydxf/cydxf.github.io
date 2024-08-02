@@ -277,7 +277,14 @@ video {
 }
 
 
+/* 常规样式省略，使用之前提供的样式 */
+
+/* 常规样式省略，使用之前提供的样式 */
+
+/* 常规样式省略，使用之前提供的样式 */
+
 .menu-icon {
+    position: absolute;
     top: 20px;
     left: 20px;
     cursor: pointer;
@@ -341,21 +348,24 @@ video {
 }
 
 .menu-icon-wrapper {
+    z-index: 1000;
     position: absolute;
-    top: 15px;
+    top: 20px;
     left: 20px;
     z-index: 1000;
 }
 
 .menu-icon-wrapper.fixed .menu-icon{
-    position: fixed;
     background-color: #001f3f; /* 深蓝色背景 */
     padding: 10px;
-    margin-left: -15px;
-    margin-top: -10px;
     border-radius: 0;
 }
 
+.menu-icon.fixed {
+    background-color: #001f3f; /* 深蓝色背景 */
+    padding: 10px;
+    border-radius: 5px;
+}
 
 /* 防止背景滚动 */
 body.no-scroll {

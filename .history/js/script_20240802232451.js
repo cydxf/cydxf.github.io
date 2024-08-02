@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
         const heroBottom = heroSection.getBoundingClientRect().bottom;
-        const heroTop = heroSection.getBoundingClientRect().top;
 
         if (heroBottom <= 0) {
             menuIconWrapper.classList.add('fixed');

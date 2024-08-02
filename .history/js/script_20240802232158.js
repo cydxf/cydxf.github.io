@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuIcon = document.getElementById('menu-icon');
     const sideNav = document.getElementById('side-nav');
     const menuIconWrapper = document.getElementById('menu-icon-wrapper');
-    const heroSection = document.querySelector('.hero');
 
     menuIcon.addEventListener('click', () => {
         menuIcon.classList.toggle('open');
@@ -11,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('scroll', () => {
+        const heroSection = document.querySelector('.hero');
         const heroBottom = heroSection.getBoundingClientRect().bottom;
-        const heroTop = heroSection.getBoundingClientRect().top;
 
         if (heroBottom <= 0) {
             menuIconWrapper.classList.add('fixed');

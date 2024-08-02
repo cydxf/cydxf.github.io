@@ -103,13 +103,13 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px; /* Set width for icon buttons */
-    height: 40px; /* Set height for icon buttons */
+    width: 20px; /* Set width for icon buttons */
+    height: 20px; /* Set height for icon buttons */
     font-size: 1.5rem; /* Adjust icon size */
     color: #fff; /* Icon color */
     background-color: transparent; /* Transparent background */
     border: 2px solid #fff; /* White border */
-    border-radius: 50%; /* Circular button */
+    border-radius: 20%; /* Circular button */
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
 }
