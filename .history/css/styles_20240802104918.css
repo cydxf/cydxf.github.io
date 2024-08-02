@@ -236,39 +236,36 @@ video {
     text-decoration: none; /* 去除下划线 */
     margin: 0 15px; /* 导航链接间距 */
     font-size: 1rem; /* 导航链接字体大小 */
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .footer-link:hover {
     text-decoration: underline; /* 鼠标悬停时添加下划线 */
 }
 
-.newsletter-signup {
-    margin-bottom: 0; /* 邮箱输入框和按钮下方的间距 */
-    margin-top: 20px;
-}
-
 .newsletter-signup form {
-    display: flex; /* 使用弹性布局 */
+    display: flex; /* 使用 flexbox 布局 */
     justify-content: center; /* 居中对齐 */
     gap: 10px; /* 输入框和按钮之间的间距 */
+    margin-bottom: 20px; /* 输入框和社交按钮之间的间距 */
 }
 
 .newsletter-signup input[type="email"] {
     padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
+    border: none;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 .newsletter-signup button {
     padding: 10px 20px;
-    font-size: 1rem;
     border: none;
     border-radius: 5px;
     background-color: #d00000; /* 按钮背景色 */
     color: #fff; /* 按钮文字颜色 */
-    cursor: pointer;
+    font-size: 1rem;
+    cursor: pointer; /* 鼠标悬停时显示手形光标 */
+    transition: background-color 0.3s; /* 平滑的背景色过渡 */
 }
 
 .newsletter-signup button:hover {
@@ -287,7 +284,7 @@ video {
     background-color: #575F6B;
     margin-top: 0; /* 版权声明与其他内容的间距 */
     border-top: 1px solid #575F6B; /* 版权声明上方分割线 */
-    padding-top: 10px; /* 版权声明与分割线的间距 */
+    padding-top: 0.5px; /* 版权声明与分割线的间距 */
     font-size: 0.875rem; /* 版权声明字体大小 */
     text-align: center;
 }

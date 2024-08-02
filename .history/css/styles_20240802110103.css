@@ -244,8 +244,7 @@ video {
 }
 
 .newsletter-signup {
-    margin-bottom: 0; /* 邮箱输入框和按钮下方的间距 */
-    margin-top: 20px;
+    margin-bottom: 20px; /* 邮箱输入框和按钮下方的间距 */
 }
 
 .newsletter-signup form {
@@ -276,7 +275,7 @@ video {
 }
 
 .footer-social-buttons {
-    margin-top: 20px; /* 社交按钮与其他内容的间距 */
+    margin-top: 200px; /* 社交按钮与其他内容的间距 */
 }
 
 .footer-social-buttons .social-button {

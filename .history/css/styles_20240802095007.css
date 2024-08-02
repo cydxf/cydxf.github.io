@@ -3,7 +3,7 @@ body, html {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: auto;
+    height: 200%;
     font-family:'Times New Roman', Times, sans-serif; /* 使用 Web 字体 */
     writing-mode: horizontal-tb;
 }
@@ -127,30 +127,11 @@ body {
     background-color: #282D34; /* 深灰色背景 */
 }
 
-.left-panel {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
 .photo-wall {
     flex: 1; /* 左侧内容占用空间 */
     background-color: #282D34; /* 浅灰色背景用于照片墙 */
-    padding: 0px;
+    padding: 20px;
     box-sizing: border-box; /* 包括内边距在元素的总宽度和高度 */
-}
-
-.video-container {
-    background-color: #282D34; /* 视频背景色 */
-    border-radius: 8px; /* 圆角 */
-    overflow: hidden; /* 防止溢出 */
-}
-
-video {
-    width: 100%; /* 使视频占满容器宽度 */
-    height: auto; /* 自动调整高度保持比例 */
 }
 
 /* 右侧帖子展示区样式 */
@@ -167,7 +148,7 @@ video {
 .post-item {
     background-color:#282D34; /* 帖子背景颜色与整体背景色一致 */
     padding: 10px;
-    color: #ffffffc7; /* 帖子文字颜色 */
+    color: #fff; /* 帖子文字颜色 */
 }
 
 .post-link {
@@ -177,23 +158,20 @@ video {
 }
 
 .post-title {
-    font-size: 0.9rem; /* 帖子标题字体大小 */
+    font-size: 1rem; /* 帖子标题字体大小 */
     font-weight: bold;
     margin-bottom: 5px;
-    font-family: 'STKaiti', '华文楷体', serif;
-
-
 }
 
 .post-description {
-    font-size: 0.8rem; /* 帖子简介字体大小 */
-    font-family: 'FangSong', '仿宋', serif;
+    font-size: 0.5rem; /* 帖子简介字体大小 */
+    font-style:normal;
 }
 
 .post-divider {
     border: 0;
     height: 2px; /* 调整高度以使其更明显 */
-    background-color: #ffffff8a; /* 白色分割线 */
+    background-color: #fff; /* 白色分割线 */
     margin: 10px 0; /* 增加上下间距 */
 }
 
@@ -212,82 +190,4 @@ video {
     .hero-content {
         margin-left: -5px;
     }
-}
-
-/* 页尾样式 */
-.footer {
-    background-color: #575F6B; /* 页尾背景色 */
-    color: #fff; /* 页尾文字颜色 */
-    padding: 20px; /* 内边距 */
-    text-align: center; /* 居中文本 */
-}
-
-.footer-content {
-    max-width: 1200px; /* 限制页尾内容最大宽度 */
-    margin: 0 auto; /* 居中对齐 */
-}
-
-.footer-nav {
-    margin-bottom: 20px; /* 导航栏与其他内容的间距 */
-}
-
-.footer-link {
-    color: #fff; /* 导航链接颜色 */
-    text-decoration: none; /* 去除下划线 */
-    margin: 0 15px; /* 导航链接间距 */
-    font-size: 1rem; /* 导航链接字体大小 */
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.footer-link:hover {
-    text-decoration: underline; /* 鼠标悬停时添加下划线 */
-}
-
-.newsletter-signup {
-    margin-bottom: 0; /* 邮箱输入框和按钮下方的间距 */
-    margin-top: 20px;
-}
-
-.newsletter-signup form {
-    display: flex; /* 使用弹性布局 */
-    justify-content: center; /* 居中对齐 */
-    gap: 10px; /* 输入框和按钮之间的间距 */
-}
-
-.newsletter-signup input[type="email"] {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.newsletter-signup button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #d00000; /* 按钮背景色 */
-    color: #fff; /* 按钮文字颜色 */
-    cursor: pointer;
-}
-
-.newsletter-signup button:hover {
-    background-color: #b00000; /* 鼠标悬停时按钮背景色 */
-}
-
-.footer-social-buttons {
-    margin-top: 20px; /* 社交按钮与其他内容的间距 */
-}
-
-.footer-social-buttons .social-button {
-    margin: 0 10px; /* 社交按钮间距 */
-}
-
-.footer-bottom {
-    background-color: #575F6B;
-    margin-top: 0; /* 版权声明与其他内容的间距 */
-    border-top: 1px solid #575F6B; /* 版权声明上方分割线 */
-    padding-top: 10px; /* 版权声明与分割线的间距 */
-    font-size: 0.875rem; /* 版权声明字体大小 */
-    text-align: center;
 }

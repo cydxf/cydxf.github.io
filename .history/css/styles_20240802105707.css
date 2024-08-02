@@ -244,8 +244,7 @@ video {
 }
 
 .newsletter-signup {
-    margin-bottom: 0; /* 邮箱输入框和按钮下方的间距 */
-    margin-top: 20px;
+    margin-bottom: 20px; /* 邮箱输入框和按钮下方的间距 */
 }
 
 .newsletter-signup form {
@@ -287,7 +286,7 @@ video {
     background-color: #575F6B;
     margin-top: 0; /* 版权声明与其他内容的间距 */
     border-top: 1px solid #575F6B; /* 版权声明上方分割线 */
-    padding-top: 10px; /* 版权声明与分割线的间距 */
+    padding-top: 0.5px; /* 版权声明与分割线的间距 */
     font-size: 0.875rem; /* 版权声明字体大小 */
     text-align: center;
 }

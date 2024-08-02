@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 200%;
+    font-family:'Times New Roman', Times, sans-serif; /* 使用 Web 字体 */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body covers the full height of the viewport */
+}
+
+.hero {
+    width: 100%;
+    height: 131.8vh; /* Viewport height */
+    background-image: url('../resource/image/shigiChannelArt_clean.jpg'); /* 首页大图  */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    position: relative;
+}
+
+.hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+    margin-left: 160px;
+    max-width: 800px; /* Ensure content does not stretch too wide */
+}
+
+.hero h1 {
+    font-style: italic;
+    font-size: 5rem; /* 适当调整标题字体大小 */
+    margin: 0;
+    padding: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 添加文本阴影使其更清晰 */
+}
+
+.hero p {
+    font-style:oblique;
+    font-size: 1.25rem; /* 适当调整副标题字体大小 */
+    margin-top: 0.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* 添加文本阴影使其更清晰 */
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Space between buttons */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 28px; /* Adds spacing between text and button */
+    font-size: 1.25rem;
+    font-style: inherit;
+    color: #fff; /* Text color */
+    background-color: transparent; /* Transparent background */
+    border: 2px solid #fff; /* White border */
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+    max-width: 200px; /* Limit maximum width */
+    width: auto; /* Allow width to adjust based on content */
+}
+
+.button:hover {
+    background-color: #fff; /* White background on hover */
+    color: #000; /* Change text color on hover if needed */
+    border-color: #fff; /* Keep border color white on hover */
+}
+
+.social-buttons {
+    display: flex;
+    gap: 20px; /* Space between social buttons */
+    margin-top: 80px; /* Add spacing above social buttons */
+}
+
+.social-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Set width for icon buttons */
+    height: 40px; /* Set height for icon buttons */
+    font-size: 1.5rem; /* Adjust icon size */
+    color: #fff; /* Icon color */
+    background-color: transparent; /* Transparent background */
+    border: 2px solid #fff; /* White border */
+    border-radius: 50%; /* Circular button */
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+}
+
+.social-button:hover {
+    background-color: #fff; /* White background on hover */
+    color: #000; /* Change icon color on hover */
+    border-color: #fff; /* Keep border color white on hover */
+}
+
+.updates-section {
+    width: 100%; /* Ensure it covers the full width */
+    background-color: #d00000c2; /* Change to pure black */
+    padding: 50% 50%; /* Padding for spacing inside the section */
+    display: flex; /* Flexbox for centering content */
+    flex-direction: column; /* Stack contents vertically */
+    justify-content: center; /* Center horizontally */
+    align-items:baseline; /* Center vertically */
+    margin-top: 115px; /* Ensure it sticks directly below the hero section */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    color: #040303; /* Ensure text is visible on black background */
+}
+
+.updates-content h2 {
+    font-size: 2rem; /* Title font size */
+    margin-bottom: 0; /* Space below the title */
+}
+
+.updates-content p {
+    font-size: 1rem; /* Content font size */
+    margin: 0; /* Remove margin */
+}
+
+.right-panel {
+    flex: 50; /* 占用右侧的空间 */
+    padding: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* 间距 */
+}
+
+.post-item {
+    background-color: #fff; /* 背景颜色 */
+    border: 1px solid #ddd; /* 边框颜色 */
+    border-radius: 8px; /* 圆角 */
+    overflow: hidden; /* 防止内容溢出 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    transition: box-shadow 0.3s ease; /* 平滑的阴影过渡 */
+}
+
+.post-link {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* 确保链接覆盖整个块 */
+}
+
+.post-title {
+    font-size: 1.5rem; /* 标题字体大小 */
+    font-weight: bold; /* 加粗 */
+    padding: 15px; /* 内边距 */
+    background-color: #f8f8f8; /* 背景颜色 */
+    border-bottom: 1px solid #ddd; /* 底部边框 */
+}
+
+.post-description {
+    font-size: 1rem; /* 简介字体大小 */
+    padding: 15px; /* 内边距 */
+}
+
+.post-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 鼠标悬停时的阴影效果 */
+}

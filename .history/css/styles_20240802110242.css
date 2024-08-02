@@ -244,7 +244,7 @@ video {
 }
 
 .newsletter-signup {
-    margin-bottom: 0; /* 邮箱输入框和按钮下方的间距 */
+    margin-bottom: 20px; /* 邮箱输入框和按钮下方的间距 */
     margin-top: 20px;
 }
 
