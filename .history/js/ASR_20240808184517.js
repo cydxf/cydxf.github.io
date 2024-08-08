@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const formData = new FormData();
         formData.append('audioFile', file);
 
-        fetch('http://localhost:5501/upload', {
+        fetch('http://127.0.0.1:5501/upload', {
             method: 'POST',
             body: formData
         })
@@ -49,14 +49,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         downloadButton.style.display = 'block';
                         downloadButton.onclick = () => {
-                            const editedText = resultText.value;  // 获取用户编辑后的内容
-                            const blob = new Blob([editedText], { type: 'text/plain' });
+                            const blob = new Blob([message.text], { type: 'text/plain' });
                             const url = URL.createObjectURL(blob);
                             const a = document.createElement('a');
                             a.href = url;
                             a.download = 'result.txt';
                             a.click();
                             URL.revokeObjectURL(url);
+
                         };
                     }
 
