@@ -5,12 +5,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const resultText = document.getElementById('resultText');
     const downloadButton = document.getElementById('downloadButton');
 
-    uploadButton.addEventListener('click', function () {
+    uploadButton.addEventListener('click', function (event) {
+        event.preventDefault();  // 阻止默认行为
+        
         console.log('上传按钮点击');
 
         const file = audioFileInput.files[0];
         if (!file) {
-            alert('请先选择一个音频文件！');
+            alert('请先选择一个文件！');
             return;
         }
 
@@ -36,24 +38,25 @@ document.addEventListener('DOMContentLoaded', function () {
                 ws.onmessage = (event) => {
                     console.log('收到 WebSocket 消息:', event.data);
                     const message = JSON.parse(event.data);
+                    console.log('解析后的消息:', message);
 
                     if (message.progress !== undefined) {
                         progressBar.value = message.progress;
                     }
 
-                    if (message.data && message.data.result && message.data.result.ws) {
-                        const words = message.data.result.ws.map(item => item.cw.map(word => word.w).join('')).join('');
-                        resultText.textContent = words;
+                    if (message.text) {
+                        resultText.textContent = message.text;
 
                         downloadButton.style.display = 'block';
                         downloadButton.onclick = () => {
-                            const blob = new Blob([words], { type: 'text/plain' });
+                            const blob = new Blob([message.text], { type: 'text/plain' });
                             const url = URL.createObjectURL(blob);
                             const a = document.createElement('a');
                             a.href = url;
                             a.download = 'result.txt';
                             a.click();
                             URL.revokeObjectURL(url);
+
                         };
                     }
 

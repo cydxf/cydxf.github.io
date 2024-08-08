@@ -104,9 +104,14 @@ wss.on('connection', ws => {
     });
 
     // Optionally handle WebSocket close here if needed
-    ws.on('close', () => {
-        console.log('WebSocket 连接关闭');
-    });
+    ws.on('close', (code, reason) => {
+        if (code === 1001) {
+            console.log('WebSocket 连接关闭: 由于网络故障或设备离线');
+            // 你可以在这里进行一些清理操作，或者记录日志
+        } else {
+            console.log(`WebSocket 连接关闭，状态码: ${code}，原因: ${reason}`);
+        }
+    });   
 });
 
 server.listen(5501, () => {
