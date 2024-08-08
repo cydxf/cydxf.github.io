@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Recognition System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Speech Recognition System</h1>
+        <div class="upload-section">
+            <input type="file" id="audio-upload" accept="audio/*">
+            <button id="upload-button">Upload Audio</button>
+        </div>
+        <div class="progress-section">
+            <div id="progress-bar"></div>
+        </div>
+        <div class="result-section">
+            <textarea id="transcription" placeholder="Transcription will appear here..."></textarea>
+            <button id="download-button">Download Transcription</button>
+        </div>
+    </div>
+    <script src="ASR.js"></script>
+</body>
+</html>

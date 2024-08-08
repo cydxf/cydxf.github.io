@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    font-family:'Times New Roman', Times, sans-serif; /* 使用 Web 字体 */
+    writing-mode: horizontal-tb;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body covers the full height of the viewport */
+}
+
+.hero {
+    width: 100%;
+    height: 131.8vh; /* Viewport height */
+    background-image: url('../resource/image/th.jpg'); /* 首页大图  */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    position: relative;
+}
+
+.hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+    margin-left: 160px;
+    max-width: 800px; /* Ensure content does not stretch too wide */
+}
+
+.hero h1 {
+    font-style: italic;
+    font-size: 5rem; /* 适当调整标题字体大小 */
+    margin: 0;
+    padding: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 添加文本阴影使其更清晰 */
+}
+
+.hero p {
+    font-style:oblique;
+    font-size: 1.25rem; /* 适当调整副标题字体大小 */
+    margin-top: 0.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* 添加文本阴影使其更清晰 */
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Space between buttons */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 28px; /* Adds spacing between text and button */
+    font-size: 1.25rem;
+    font-style: inherit;
+    color: #fff; /* Text color */
+    background-color: transparent; /* Transparent background */
+    border: 2px solid #fff; /* White border */
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+    max-width: 200px; /* Limit maximum width */
+    width: auto; /* Allow width to adjust based on content */
+}
+
+.button:hover {
+    background-color: #fff; /* White background on hover */
+    color: #000; /* Change text color on hover if needed */
+    border-color: #fff; /* Keep border color white on hover */
+}
+
+.social-buttons {
+    display: flex;
+    gap: 20px; /* Space between social buttons */
+    margin-top: 80px; /* Add spacing above social buttons */
+}
+
+.social-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Set width for icon buttons */
+    height: 40px; /* Set height for icon buttons */
+    font-size: 1.5rem; /* Adjust icon size */
+    color: #fff; /* Icon color */
+    background-color: transparent; /* Transparent background */
+    border: 2px solid #fff; /* White border */
+    border-radius: 50%; /* Circular button */
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+}
+
+.social-button:hover {
+    background-color: #fff; /* White background on hover */
+    color: #000; /* Change icon color on hover */
+    border-color: #fff; /* Keep border color white on hover */
+}
+
+.content-section {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: #282D34; /* 深灰色背景 */
+}
+
+.left-panel {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.photo-wall {
+    flex: 1; /* 左侧内容占用空间 */
+    background-color: #282D34; /* 浅灰色背景用于照片墙 */
+    padding: 0px;
+    box-sizing: border-box; /* 包括内边距在元素的总宽度和高度 */
+}
+
+.video-container {
+    background-color: #282D34; /* 视频背景色 */
+    border-radius: 8px; /* 圆角 */
+    overflow: hidden; /* 防止溢出 */
+}
+
+video {
+    width: 100%; /* 使视频占满容器宽度 */
+    height: auto; /* 自动调整高度保持比例 */
+}
+
+/* 右侧帖子展示区样式 */
+.posts-section {
+    flex: 1; /* 右侧内容占用空间 */
+    background-color: #282D34; /* 深灰色背景 */
+    padding: 20px;
+    box-sizing: border-box; /* 包括内边距在元素的总宽度和高度 */
+    display: flex;
+    flex-direction: column; /* 纵向排布帖子 */
+    margin-left: -40px; /* 修改部分：使帖子展示区稍微左移 */
+}
+
+.post-item {
+    background-color:#282D34; /* 帖子背景颜色与整体背景色一致 */
+    padding: 10px;
+    color: #ffffffc7; /* 帖子文字颜色 */
+}
+
+.post-link {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* 确保链接覆盖整个块 */
+}
+
+.post-title {
+    font-size: 1.5rem; /* 帖子标题字体大小 */
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: 'STKaiti', '华文楷体', serif;
+
+
+}
+
+.post-description {
+    font-size: 1rem; /* 帖子简介字体大小 */
+    font-family: 'FangSong', '仿宋', serif;
+}
+
+.post-divider {
+    border: 0;
+    height: 2px; /* 调整高度以使其更明显 */
+    background-color: #ffffff8a; /* 白色分割线 */
+    margin: 10px 0; /* 增加上下间距 */
+}
+
+
+/* 页尾样式 */
+.footer {
+    background-color: #575F6B; /* 页尾背景色 */
+    color: #fff; /* 页尾文字颜色 */
+    padding: 20px; /* 内边距 */
+    text-align: center; /* 居中文本 */
+}
+
+.footer-content {
+    max-width: 1200px; /* 限制页尾内容最大宽度 */
+    margin: 0 auto; /* 居中对齐 */
+}
+
+.footer-nav {
+    margin-bottom: 20px; /* 导航栏与其他内容的间距 */
+}
+
+.footer-link {
+    color: #fff; /* 导航链接颜色 */
+    text-decoration: none; /* 去除下划线 */
+    margin: 0 15px; /* 导航链接间距 */
+    font-size: 1rem; /* 导航链接字体大小 */
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* 鼠标悬停时添加下划线 */
+}
+
+.newsletter-signup {
+    margin-bottom: 0; /* 邮箱输入框和按钮下方的间距 */
+    margin-top: 20px;
+}
+
+.newsletter-signup form {
+    display: flex; /* 使用弹性布局 */
+    justify-content: center; /* 居中对齐 */
+    gap: 10px; /* 输入框和按钮之间的间距 */
+}
+
+.newsletter-signup input[type="email"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.newsletter-signup button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #d00000; /* 按钮背景色 */
+    color: #fff; /* 按钮文字颜色 */
+    cursor: pointer;
+}
+
+.newsletter-signup button:hover {
+    background-color: #b00000; /* 鼠标悬停时按钮背景色 */
+}
+
+.footer-social-buttons {
+    margin-top: 20px; /* 社交按钮与其他内容的间距 */
+}
+
+.footer-social-buttons .social-button {
+    margin: 0 10px; /* 社交按钮间距 */
+}
+
+.footer-bottom {
+    background-color: #575F6B;
+    margin-top: 0; /* 版权声明与其他内容的间距 */
+    border-top: 1px solid #575F6B; /* 版权声明上方分割线 */
+    padding-top: 10px; /* 版权声明与分割线的间距 */
+    font-size: 0.875rem; /* 版权声明字体大小 */
+    text-align: center;
+}
+
+
+.menu-icon {
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 20px;
+    width: 20px;
+    display: none; /* 默认隐藏菜单图标 */
+}
+
+.menu-icon .bar {
+    width: 100%;
+    height: 2.95px;
+    background-color: #fff;
+    transition: all 0.3s;
+    margin: 4px 0;
+}
+
+
+
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #001f3f; /* 深蓝色背景 */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    z-index: 999;
+    transform: translateX(-100%); /* 初始隐藏在屏幕外 */
+}
+
+.side-nav .nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8rem;
+    margin: 20px 0;
+}
+
+.side-nav.open {
+    transform: translateX(0); /* 展开时显示 */
+}
+
+.menu-icon.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.menu-icon-wrapper {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.menu-icon-wrapper.fixed .menu-icon{
+    position: fixed;
+    background-color: #001f3f; /* 深蓝色背景 */
+    padding: 10px;
+    margin-left: -15px;
+    margin-top: -10px;
+    border-radius: 0;
+}
+
+
+/* 防止背景滚动 */
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+
+/* 小屏幕调整 */
+@media (max-width: 768px) {
+    .social-buttons {
+        margin-top: 40px;
+    }
+    .content-section  {
+        flex-direction: column; /* 在小屏幕上改为纵向布局 */
+    }
+
+    .photo-wall, .posts-section {
+        width: 100%; /* 确保内容区宽度适应屏幕 */
+        padding: 10px; /* 减少内边距 */
+        margin-left: 0; /* 突出修改部分：小屏幕时取消左移 */
+    }
+
+    .hero-content {
+        margin-left: -5px;
+    }
+
+    .menu-icon {
+        display: block; /* 小屏幕时显示菜单图标 */
+    }
+
+    .content-section, .hero-content, .footer {
+        padding-top: 60px; /* 给导航栏腾出空间 */
+    }
+}

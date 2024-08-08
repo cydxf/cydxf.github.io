@@ -17,7 +17,7 @@ body {
 .hero {
     width: 100%;
     height: 131.8vh; /* Viewport height */
-    background-image: url('../resource/image/shigiChannelArt_clean.jpg'); /* 首页大图  */
+    background-image: url('../resource/image/th.jpg'); /* 首页大图  */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
