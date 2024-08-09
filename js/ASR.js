@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const formData = new FormData();
         formData.append('audioFile', file);
 
-        fetch('https://localhost:5501/upload', {
+        fetch('http://localhost:5501/upload', {
             method: 'POST',
             body: formData
         })
