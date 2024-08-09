@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const formData = new FormData();
         formData.append('audioFile', file);
 
-        fetch('http://cydxf.github.io/api/upload', {
+        fetch('https://bcd7-2409-8a56-c25-aeb0-1486-df21-e450-134.ngrok-free.app//upload', {
             method: 'POST',
             body: formData
         })
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (data.success) {
                 console.log('文件上传成功:', data.file);
 
-                const ws = new WebSocket('ws://cydxf.github.io:5501');
+                const ws = new WebSocket('ws://bcd7-2409-8a56-c25-aeb0-1486-df21-e450-134.ngrok-free.app/:5501');
 
                 ws.onopen = () => {
                     console.log('WebSocket 连接已建立');
