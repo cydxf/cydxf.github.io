@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const formData = new FormData();
         formData.append('audioFile', file);
 
-        fetch('http://cydxf.github.io/upload', {
+        fetch('http://cydxf.github.io/api/upload', {
             method: 'POST',
             body: formData
         })
