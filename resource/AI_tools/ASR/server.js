@@ -6,6 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const cors = require('cors');
 const { spawn } = require('child_process');
+const port = 5501;
 
 const app = express();
 const server = http.createServer(app);
@@ -18,9 +19,8 @@ app.use(cors());
 const upload = multer({ dest: 'uploads/' });
 
 // 提供静态文件服务
-app.use('/js', express.static(path.join(__dirname, '../../../js/ASR.js')));
-app.use('/css', express.static(path.join(__dirname, '../../../css/ASR.css')));
-app.use('/resource', express.static(path.join(__dirname, '../../resource')));
+app.use('/js', express.static(path.join(__dirname, '../../../js')));
+app.use('/css', express.static(path.join(__dirname, '../../../css')));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
@@ -114,6 +114,6 @@ wss.on('connection', ws => {
     });   
 });
 
-server.listen(5501, () => {
+server.listen(5501,'0.0.0.0', () => {
     console.log('服务器正在监听端口 5501');
 });

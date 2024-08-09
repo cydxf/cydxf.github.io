@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const formData = new FormData();
         formData.append('audioFile', file);
 
-        fetch('http://localhost:5501/upload', {
+        fetch('http://2409:8a56:c25:aeb0:1486:df21:e450:134/upload', {
             method: 'POST',
             body: formData
         })
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (data.success) {
                 console.log('文件上传成功:', data.file);
 
-                const ws = new WebSocket('ws://localhost:5501');
+                const ws = new WebSocket('ws://2409:8a56:c25:aeb0:1486:df21:e450:134:5501');
 
                 ws.onopen = () => {
                     console.log('WebSocket 连接已建立');
