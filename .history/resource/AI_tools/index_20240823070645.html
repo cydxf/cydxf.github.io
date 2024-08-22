@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI工具选择器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .tool-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .tool-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .tool-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .tool-description {
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI工具选择器</h1>
+        <div class="tool-grid" id="toolGrid">
+            <!-- AI工具卡片将通过JavaScript动态添加 -->
+        </div>
+    </div>
+
+    <script>
+        // AI工具数据
+        const aiTools = [
+            {
+                name: "ChatGPT",
+                icon: "🤖",
+                description: "OpenAI开发的大型语言模型",
+                url: "https://chat.openai.com/"
+            },
+            {
+                name: "Claude",
+                icon: "🧠",
+                description: "Anthropic开发的AI助手",
+                url: "https://chat.kelaode.ai/new"
+            },
+            {
+                name: "语音识别助手",
+                icon: "🎤",
+                description: "自研语音识别工具",
+                url: "https://cydxf.github.io/resource/AI_tools/ASR/index.html",  
+                custom: true
+            },
+            {
+                name: "提示词助手",
+                icon: "💡",
+                description: "自研提示词生成工具",
+                url: "https://cydxf.github.io/resource/AI_tools/PromptAssistant/index.html",  
+                custom: true
+            },
+            {
+                name: "可灵",
+                icon: "🎨",
+                description: "快手开发的文生图模型",
+                url: "https://www.kuaishou.com/ai-lab"
+            },
+            {
+                name: "DALL-E",
+                icon: "🖼️",
+                description: "AI图像生成工具",
+                url: "https://openai.com/product/dall-e-2"
+            },
+            {
+                name: "Midjourney",
+                icon: "🎭",
+                description: "高质量AI艺术和图像生成",
+                url: "https://www.midjourney.com/"
+            },
+            {
+                name: "Jasper",
+                icon: "✍️",
+                description: "AI写作助手",
+                url: "https://www.jasper.ai/"
+            },
+            {
+                name: "Lobe",
+                icon: "🧠",
+                description: "简易机器学习工具",
+                url: "https://www.lobe.ai/"
+            },
+            {
+                name: "Runway",
+                icon: "🎬",
+                description: "AI视频编辑和生成",
+                url: "https://runwayml.com/"
+            }
+        ];
+
+        // 创建工具卡片
+        function createToolCard(tool) {
+            const card = document.createElement('div');
+            card.className = 'tool-card';
+            card.innerHTML = `
+                <div class="tool-icon">${tool.icon}</div>
+                <div class="tool-name">${tool.name}</div>
+                <div class="tool-description">${tool.description}</div>
+            `;
+            card.addEventListener('click', () => {
+                window.open(tool.url, '_blank');
+            });
+            return card;
+        }
+
+        // 添加工具卡片到网格
+        const toolGrid = document.getElementById('toolGrid');
+        aiTools.forEach(tool => {
+            toolGrid.appendChild(createToolCard(tool));
+        });
+    </script>
+</body>
+</html>
