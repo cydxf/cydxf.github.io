@@ -3,3 +3,5 @@ Thumbs.db
 *.log
 node_modules/
 # 可能添加其他忽略条目
+.history
+.vscode
